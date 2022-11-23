@@ -1,8 +1,4 @@
 
-
-
-
-
 class RT:
     def __init__(self, RNA):
         self.dict = { "u" : "A",
@@ -15,7 +11,6 @@ class RT:
                       "G" : "C",
                       }
         self.RNA = RNA
-    
     
     def reverse_transcrive(self):
         ls = []

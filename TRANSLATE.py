@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 class TRANSLATE:
     def __init__(self, RNA, rf):
         self.codons = {
