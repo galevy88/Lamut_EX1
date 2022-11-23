@@ -1,10 +1,16 @@
 
 class USRR:
     def __init__(self, DNA):
+        self.check_input(DNA)
         self.DNA = DNA
         self.frontier = []
         self.SRR = {}
 
+    def check_input(self, dna):
+        for d in dna:
+            if (d != 'A' and d !='C' and d != 'G' and d !='T'):
+                print("Invalid DNA Input")
+                exit()
     
     def find_srr_one_time(self,dna, sr, s):
         work_dna = dna[s:]
