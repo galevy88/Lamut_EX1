@@ -32,7 +32,8 @@ class USRR:
             for s in range(0, sr):
                 cp_dna = self.DNA
                 self.find_srr_one_time(cp_dna, sr , s)
-        return self.create_ls(self.SRR)
+        ls = self.create_ls(self.SRR)
+        return self.parser(ls)
     
     def split(self, worked_dna, sr):
         ls = [worked_dna[i:i+sr] for i in range(0, len(worked_dna), sr)]
@@ -43,4 +44,11 @@ class USRR:
         for key in dict:
             ls.append((key, dict[key]))
         return ls
+    
+    def parser(self, list):
+        str = ""
+        for srr in list:
+            str += f"{srr[0]},{srr[1]};"
+        return str[:-1]
+            
 
