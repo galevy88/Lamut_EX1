@@ -26,8 +26,8 @@ class TRANSLATE:
             "GUA" : "V", "GCA" : "A", "GAA" : "E", "GGA" : "G",           
             "GUG" : "V", "GCG" : "A", "GAG" : "E", "GGG" : "A"
         }
-        self.rf = rf
-        self.RNA = RNA[rf-1:]
+        self.rf = int(rf)
+        self.RNA = RNA[self.rf-1:]
 
     
     def choose_protein_to_return(self, Proteins):
