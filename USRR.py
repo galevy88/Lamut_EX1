@@ -35,6 +35,7 @@ class USRR:
                 cp_dna = self.DNA
                 self.find_srr_one_time(cp_dna, sr , s)
         ls = self.create_ls(self.SRR)
+        ls.sort(key=lambda x: x[1])
         return self.parser(ls)
     
 
